@@ -147,7 +147,7 @@ export async function scanAllHistoricalUsage(showProgress = true) {
           cwd: claudeDir,
           absolute: true
         });
-        allFiles.push(...files);
+        for (const file of files) allFiles.push(file);
       } catch {
         // Skip paths that can't be accessed
       }
